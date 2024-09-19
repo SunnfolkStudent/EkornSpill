@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
-    public Vector2 wallBoxSize = new Vector2(0.2f, 0.4f);
+    public Vector2 wallBoxingSize = new Vector2(0.2f, 0.4f);
 
     public int playerHealth;
     public float damageColdown;
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         playerIsGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
         
-        playerIsWalled = Physics2D.OverlapBox(wallCheck.position, wallBoxSize, 0f, whatIsGround);
+        playerIsWalled = Physics2D.OverlapBox(wallCheck.position, wallBoxingSize, 0f, whatIsGround);
         
         //Jump if Grounded
         if (_input.Jump && playerIsGrounded)
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
         
         //wallCollider
         Gizmos.color = Color.magenta;
-        Gizmos.DrawWireCube(wallCheck.position, wallBoxSize);
+        Gizmos.DrawWireCube(wallCheck.position, wallBoxingSize);
     }
     
     private static void RestartScene()
