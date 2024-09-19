@@ -8,14 +8,18 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 8f;
     public float jumpSpeed = 7f;
+    public float climbSpeed = 3f;
 
     public bool playerIsGrounded;
     public bool playerIsWalled;
+    
     public Transform groundCheck;
     public Transform wallCheck;
+    
     public LayerMask whatIsGround;
+    
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
-    public Vector2 wallBoxSize = new Vector2(0.2f, 0.8f);
+    public Vector2 wallBoxSize = new Vector2(0.2f, 0.4f);
 
     public int playerHealth;
     public float damageColdown;
@@ -31,22 +35,49 @@ public class PlayerController : MonoBehaviour
     {
         playerIsGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
         
+        playerIsWalled = Physics2D.OverlapBox(wallCheck.position, wallBoxSize, 0f, whatIsGround);
+        
+        //Jump if Grounded
         if (_input.Jump && playerIsGrounded)
         {
             _rigidbody2D.linearVelocityY = jumpSpeed;
         }
+        
+        if (playerIsWalled && _input.Vertical > 0f)
+        {
+            _rigidbody2D.linearVelocityY = climbSpeed;
+            _rigidbody2D.gravityScale = 0f;
+            Debug.Log("Climbing");
+        }
+        
+        else if (playerIsWalled == true)
+        {
+            _rigidbody2D.linearVelocityY = 0f;
+            _rigidbody2D.gravityScale = 0f;
+            Debug.Log("Player is walled");
+        }
+        
+        else
+        {
+            _rigidbody2D.gravityScale = 1f;
+        }
+        
     }
 
     private void FixedUpdate()
     {
         _rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;
+        
+        //If moving left or right
         if (_input.Horizontal <= -1)
         {
+            //Turn Right
             if (transform.localScale.x <= 0) return;
             transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
         }
         else
         {
+            //Turn Left
             if (transform.localScale.x >= 0) return;
             transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
         }
