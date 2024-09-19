@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 7f;
 
     public bool playerIsGrounded;
+    public bool playerIsWalled;
     public Transform groundCheck;
+    public Transform wallCheck;
     public LayerMask whatIsGround;
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
+    public Vector2 wallBoxSize = new Vector2(0.2f, 0.8f);
 
     public int playerHealth;
     public float damageColdown;
@@ -37,12 +40,27 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         _rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;
+        if (_input.Horizontal <= -1)
+        {
+            if (transform.localScale.x <= 0) return;
+            transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
+        }
+        else
+        {
+            if (transform.localScale.x >= 0) return;
+            transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
+        }
     }
 
     private void OnDrawGizmos()
     {
+        //groundCollider
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireCube(groundCheck.position, groundBoxSize);
+        
+        //wallCollider
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(wallCheck.position, wallBoxSize);
     }
     
     private static void RestartScene()
