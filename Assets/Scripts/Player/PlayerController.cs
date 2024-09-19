@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 8f;
     public float jumpSpeed = 7f;
-    public float climbSpeed = 3f;
+    public float climbSpeed = 5f;
 
     public bool playerIsGrounded;
     public bool playerIsWalled;
@@ -74,12 +74,14 @@ public class PlayerController : MonoBehaviour
             //Turn Right
             if (transform.localScale.x <= 0) return;
             transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
+            Debug.Log("Right");
         }
         else
         {
             //Turn Left
             if (transform.localScale.x >= 0) return;
             transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
+            Debug.Log("Left");
         }
     }
 
