@@ -68,21 +68,11 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;
         
-        //If moving left or right
-        if (_input.Horizontal <= -1)
+        if (_input.Horizontal != 0)
         {
-            //Turn Right
-            if (transform.localScale.x <= 0) return;
-            transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
-            Debug.Log("Right");
+            transform.localScale = new Vector2(Mathf.Sign(_input.Horizontal), 1f);
         }
-        else
-        {
-            //Turn Left
-            if (transform.localScale.x >= 0) return;
-            transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
-            Debug.Log("Left");
-        }
+      
     }
 
     private void OnDrawGizmos()
