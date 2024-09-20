@@ -253,6 +253,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3193166063608079667, guid: a755bb2b9446d7f408b9c45a90ca71f9, type: 3}
+      propertyPath: climbSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193166063608079667, guid: a755bb2b9446d7f408b9c45a90ca71f9, type: 3}
+      propertyPath: 'climbSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4712b64cd9de127458e29a22132b712e, type: 3}
+    - target: {fileID: 3193166063608079667, guid: a755bb2b9446d7f408b9c45a90ca71f9, type: 3}
+      propertyPath: 'climbSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 18a74192e2d416c4ca84480026aab3e2, type: 3}
+    - target: {fileID: 3193166063608079667, guid: a755bb2b9446d7f408b9c45a90ca71f9, type: 3}
+      propertyPath: 'climbSounds.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 433d08deca170c440ae563e0e04e175a, type: 3}
     - target: {fileID: 6842469552161157057, guid: a755bb2b9446d7f408b9c45a90ca71f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

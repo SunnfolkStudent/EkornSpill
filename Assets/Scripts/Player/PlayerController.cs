@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
     {
         if (playerIsGrounded)
         {
-            if (_input.Horizontal != 0)
+            if (_input.Horizontal != 0 && !playerIsWalled)
             {
                 _animator.Play("Player_Walk");
             }
