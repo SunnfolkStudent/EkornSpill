@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
             _audioSource.PlayOneShot(jumpSounds[Random.Range(0, jumpSounds.Length)]);
         }
         
+        //Climbing
         if (playerIsWalled && _input.Vertical > 0f)
         {
             _rigidbody2D.linearVelocityY = climbSpeed;
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Climbing");
         }
         
+        //Stuck to wall
         else if (playerIsWalled == true)
         {
             _rigidbody2D.linearVelocityY = 0f;
@@ -71,11 +73,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player is walled");
         }
         
+        //Normal falling
         else
         {
             _rigidbody2D.gravityScale = 1f;
         }
         UpdateAnimation();
+        Attack();
     }
 
     private void FixedUpdate()
@@ -92,7 +96,7 @@ public class PlayerController : MonoBehaviour
     {
         if (playerIsGrounded)
         {
-            if (_input.Horizontal != 0)
+            if (_input.Horizontal != 0 && !playerIsWalled)
             {
                 _animator.Play("Player_Walk");
             }
@@ -112,6 +116,23 @@ public class PlayerController : MonoBehaviour
                 _animator.Play("Player_Fall");
             }
         }
+    }
+    private void Attack()
+    {
+        //Sjekk at vi ikke koliderer med en fiende
+        if (!Physics2D.OverlapCircle(groundCheck.position, 0.2f, LayerMask.GetMask("Enemy"))) return;
+
+        //Sjekk om fienden colliderer med groundCollider
+        var enemyCollider = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, LayerMask.GetMask("Enemy"));
+        
+        //foreach går gjennom hvert element i listen
+        foreach (var enemy in enemyCollider)
+        {
+            Destroy(enemy.gameObject);
+        }
+        
+        //Jump-bust etter treff
+        _rigidbody2D.linearVelocityY = jumpSpeed/1.3f;
     }
     private void OnDrawGizmos()
     {
