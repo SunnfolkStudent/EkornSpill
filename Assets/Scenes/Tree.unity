@@ -265,9 +265,9 @@ GameObject:
   m_Component:
   - component: {fileID: 361998892}
   - component: {fileID: 361998891}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 808220027}
   - component: {fileID: 808220029}
   - component: {fileID: 808220028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 811961837}
   - component: {fileID: 811961839}
   - component: {fileID: 811961838}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,9 +559,9 @@ GameObject:
   - component: {fileID: 1375284593}
   - component: {fileID: 1375284595}
   - component: {fileID: 1375284594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Middleground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
