@@ -220,7 +220,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundBoxSize: {x: 0.8, y: 0.2}
-  wallBoxSize: {x: 0.2, y: 0.8}
+  wallBoxingSize: {x: 0.2, y: 0.4}
   playerHealth: 3
   damageColdown: 1.5
 --- !u!114 &6377942634771938145
