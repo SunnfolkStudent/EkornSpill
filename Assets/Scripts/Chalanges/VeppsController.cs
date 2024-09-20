@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KnelerController : MonoBehaviour
+public class VeppsController : MonoBehaviour
 {
     public float moveSpeed;
     public float sightRange;
