@@ -58,9 +58,11 @@ public class PlayerController : MonoBehaviour
         }
         
         //Climbing
-        if (playerIsWalled && _input.Vertical > 0f)
+        if (playerIsWalled && _input.Vertical != 0)
         {
-            _rigidbody2D.linearVelocityY = climbSpeed;
+            //_rigidbody2D.linearVelocityY = climbSpeed;
+            
+            _rigidbody2D.linearVelocityY = climbSpeed * _input.Vertical;
             _rigidbody2D.gravityScale = 0f;
         }
         
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour
         {
             _rigidbody2D.linearVelocityY = 0f;
             _rigidbody2D.gravityScale = 0f;
+            Debug.Log("walled");
         }
         
         //Normal falling
