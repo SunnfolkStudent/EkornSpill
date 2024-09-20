@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
             _audioSource.PlayOneShot(jumpSounds[Random.Range(0, jumpSounds.Length)]);
         }
         
+        //Climbing
         if (playerIsWalled && _input.Vertical > 0f)
         {
             _rigidbody2D.linearVelocityY = climbSpeed;
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Climbing");
         }
         
+        //Stuck to wall
         else if (playerIsWalled == true)
         {
             _rigidbody2D.linearVelocityY = 0f;
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player is walled");
         }
         
+        //Normal falling
         else
         {
             _rigidbody2D.gravityScale = 1f;
