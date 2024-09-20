@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
     private InputActions _input;
     private Rigidbody2D _rigidbody2D;
-
+    private AudioSource _audioSource;
+    private Animator _animator;
+    
     public float moveSpeed = 8f;
     public float jumpSpeed = 7f;
     public float climbSpeed = 5f;
@@ -18,7 +21,7 @@ public class PlayerController : MonoBehaviour
     
     public LayerMask whatIsGround;
     
-    private Animator _animator;
+
     
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
     public Vector2 wallBoxingSize = new Vector2(0.2f, 0.4f);
@@ -26,12 +29,18 @@ public class PlayerController : MonoBehaviour
     public int playerHealth;
     public float damageColdown;
     private float _damageColdownTimer;
+
+    [Header("Audio")] 
+    public AudioClip[] climbSounds;
+    public AudioClip[] jumpSounds;
+    
     
     private void Start()
     {
         _input = GetComponentInParent<InputActions>();
         _animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -44,8 +53,11 @@ public class PlayerController : MonoBehaviour
         if (_input.Jump && playerIsGrounded)
         {
             _rigidbody2D.linearVelocityY = jumpSpeed;
+            
+            _audioSource.PlayOneShot(jumpSounds[Random.Range(0, jumpSounds.Length)]);
         }
         
+        //Climbing
         if (playerIsWalled && _input.Vertical > 0f)
         {
             _rigidbody2D.linearVelocityY = climbSpeed;
@@ -53,6 +65,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Climbing");
         }
         
+        //Stuck to wall
         else if (playerIsWalled == true)
         {
             _rigidbody2D.linearVelocityY = 0f;
@@ -60,11 +73,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player is walled");
         }
         
+        //Normal falling
         else
         {
             _rigidbody2D.gravityScale = 1f;
         }
         UpdateAnimation();
+        Attack();
     }
 
     private void FixedUpdate()
@@ -81,7 +96,7 @@ public class PlayerController : MonoBehaviour
     {
         if (playerIsGrounded)
         {
-            if (_input.Horizontal != 0)
+            if (_input.Horizontal != 0 && !playerIsWalled)
             {
                 _animator.Play("Player_Walk");
             }
@@ -101,6 +116,23 @@ public class PlayerController : MonoBehaviour
                 _animator.Play("Player_Fall");
             }
         }
+    }
+    private void Attack()
+    {
+        //Sjekk at vi ikke koliderer med en fiende
+        if (!Physics2D.OverlapCircle(groundCheck.position, 0.2f, LayerMask.GetMask("Enemy"))) return;
+
+        //Sjekk om fienden colliderer med groundCollider
+        var enemyCollider = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, LayerMask.GetMask("Enemy"));
+        
+        //foreach går gjennom hvert element i listen
+        foreach (var enemy in enemyCollider)
+        {
+            Destroy(enemy.gameObject);
+        }
+        
+        //Jump-bust etter treff
+        _rigidbody2D.linearVelocityY = jumpSpeed/1.3f;
     }
     private void OnDrawGizmos()
     {
