@@ -7,6 +7,8 @@ public class VeppsController : MonoBehaviour
 
     public LayerMask whatIsGround;
     
+    private Animator _animator;
+    
     public bool _canAttack;
     public bool dying;
     private Vector3 _attackDirection;
@@ -15,6 +17,7 @@ public class VeppsController : MonoBehaviour
     private void Start()
     {
         _target = GameObject.Find("Player").transform;
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -27,12 +30,17 @@ public class VeppsController : MonoBehaviour
             {
                 _attackDirection = Vector3.Normalize(_target.position - transform.position);
                 _canAttack = true;
+                
             }
         }
 
         if (_canAttack == true)
         {
             transform.position += _attackDirection * (moveSpeed * Time.deltaTime);
+
+            transform.localScale = new Vector2(Mathf.Sign(_attackDirection.x), 1f);
+            
+            _animator.Play("Veps_Attack");
             
             if(Physics2D.OverlapCircle(transform.position, 0.5f, whatIsGround))
             {
@@ -41,6 +49,10 @@ public class VeppsController : MonoBehaviour
                 Destroy(gameObject, 0.5f);
                 
             }
+        }
+        else
+        {
+            _animator.Play("Veps_Idle");
         }
     }
     

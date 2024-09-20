@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
     private InputActions _input;
     private Rigidbody2D _rigidbody2D;
-
+    private AudioSource _audioSource;
+    private Animator _animator;
+    
     public float moveSpeed = 8f;
     public float jumpSpeed = 7f;
     public float climbSpeed = 5f;
@@ -18,7 +21,7 @@ public class PlayerController : MonoBehaviour
     
     public LayerMask whatIsGround;
     
-    private Animator _animator;
+
     
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
     public Vector2 wallBoxingSize = new Vector2(0.2f, 0.4f);
@@ -26,12 +29,18 @@ public class PlayerController : MonoBehaviour
     public int playerHealth;
     public float damageColdown;
     private float _damageColdownTimer;
+
+    [Header("Audio")] 
+    public AudioClip[] climbSounds;
+    public AudioClip[] jumpSounds;
+    
     
     private void Start()
     {
         _input = GetComponentInParent<InputActions>();
         _animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -44,6 +53,8 @@ public class PlayerController : MonoBehaviour
         if (_input.Jump && playerIsGrounded)
         {
             _rigidbody2D.linearVelocityY = jumpSpeed;
+            
+            _audioSource.PlayOneShot(jumpSounds[Random.Range(0, jumpSounds.Length)]);
         }
         
         if (playerIsWalled && _input.Vertical > 0f)
