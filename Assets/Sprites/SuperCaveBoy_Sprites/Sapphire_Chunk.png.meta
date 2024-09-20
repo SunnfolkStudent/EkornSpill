@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sapphire_Chunk_0: -2840400238323755911
+      Sapphire_Chunk_1: -2083783036984284271
+      Sapphire_Chunk_2: -799061288100295850
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sapphire_GUI_0: 3025788335408307609
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
