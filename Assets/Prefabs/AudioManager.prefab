@@ -46,16 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 5713019957480442809}
-  intro: {fileID: 8300000, guid: c0a2e9c70d2afe643a168641c963e05c, type: 3}
-  introLoop: {fileID: 8300000, guid: 2145a498408fc224e97663fed791426c, type: 3}
-  entrens: {fileID: 8300000, guid: d20097142e8be184ca6cf4609df114a2, type: 3}
-  enemyLoop: {fileID: 8300000, guid: c29e18681dc22e245af8a986996de84f, type: 3}
-  end: {fileID: 8300000, guid: 1d6ab3e2950951741b05d38f9d511966, type: 3}
-  death: {fileID: 8300000, guid: 5da234460c1f10040b14b9b62c9f6da0, type: 3}
-  musicTimer: 2.1
+  intro: {fileID: 8300000, guid: fdac6e38870c6784ca8c5cf1137f13db, type: 3}
+  loop: {fileID: 8300000, guid: 6c1e55ad45720864393871d900ab1af3, type: 3}
   relativTimer: 0
   timer: 0
-  stage: 0
 --- !u!1 &9012368666463455843
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,9 +95,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.145
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
