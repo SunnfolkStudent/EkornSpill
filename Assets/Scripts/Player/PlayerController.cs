@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     
     public LayerMask whatIsGround;
     
+    private Animator _animator;
+    
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
     public Vector2 wallBoxingSize = new Vector2(0.2f, 0.4f);
 
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _input = GetComponentInParent<InputActions>();
+        _animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
@@ -61,20 +64,44 @@ public class PlayerController : MonoBehaviour
         {
             _rigidbody2D.gravityScale = 1f;
         }
-        
+        UpdateAnimation();
     }
 
     private void FixedUpdate()
     {
         _rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;
         
+        //Left or Right
         if (_input.Horizontal != 0)
         {
             transform.localScale = new Vector2(Mathf.Sign(_input.Horizontal), 1f);
         }
-      
     }
-
+    private void UpdateAnimation()
+    {
+        if (playerIsGrounded)
+        {
+            if (_input.Horizontal != 0)
+            {
+                _animator.Play("Player_Walk");
+            }
+            else
+            {
+                _animator.Play("Player_Idle");
+            }
+        }
+        else
+        {
+            if (_rigidbody2D.linearVelocityY > 0)
+            {
+                _animator.Play("Player_Jump");
+            }
+            else
+            {
+                _animator.Play("Player_Fall");
+            }
+        }
+    }
     private void OnDrawGizmos()
     {
         //groundCollider
