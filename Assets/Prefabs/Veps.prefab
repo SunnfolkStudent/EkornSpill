@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7126843109215240373}
   - component: {fileID: 4744084291941167736}
   - component: {fileID: 4524194560569286039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Veps
   m_TagString: Enemy
   m_Icon: {fileID: 0}

@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
             _rigidbody2D.gravityScale = 1f;
         }
         UpdateAnimation();
+        Attack();
     }
 
     private void FixedUpdate()
@@ -115,6 +116,23 @@ public class PlayerController : MonoBehaviour
                 _animator.Play("Player_Fall");
             }
         }
+    }
+    private void Attack()
+    {
+        //Sjekk at vi ikke koliderer med en fiende
+        if (!Physics2D.OverlapCircle(groundCheck.position, 0.2f, LayerMask.GetMask("Enemy"))) return;
+
+        //Sjekk om fienden colliderer med groundCollider
+        var enemyCollider = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, LayerMask.GetMask("Enemy"));
+        
+        //foreach går gjennom hvert element i listen
+        foreach (var enemy in enemyCollider)
+        {
+            Destroy(enemy.gameObject);
+        }
+        
+        //Jump-bust etter treff
+        _rigidbody2D.linearVelocityY = jumpSpeed/1.3f;
     }
     private void OnDrawGizmos()
     {
