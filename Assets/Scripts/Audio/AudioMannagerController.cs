@@ -7,13 +7,12 @@ public class AudioMannagerController : MonoBehaviour
     [Header("Music Source")] [SerializeField]
     AudioSource musicSource;
 
-    [Header("Audio Clips")]
-    
-    
+    [Header("Music Clips")]
+    public AudioClip intro;
+    public AudioClip loop;
 
-    //Time of a tab
-    public float musicTimer = 1.90476f;
-
+    private float introValue = 0;
+    
     //Waiting time
     public float relativTimer;
 
@@ -22,6 +21,7 @@ public class AudioMannagerController : MonoBehaviour
 
     public static AudioMannagerController instance;
 
+    /*
     //Never Die
     private void Awake()
     {
@@ -34,19 +34,38 @@ public class AudioMannagerController : MonoBehaviour
         else {
             Destroy(gameObject);
         }
-}
+    }
+*/
 
-//Check if its main stage to start from beggining
+    //Check if its main stage to start from beggining
     private void Start()
     {
-        
+        relativTimer = 0.5f;
     }
 
     //constant check and changing of music
     private void Update()
     {
+        if (introValue == 2) return;
         //timmer
         timer += Time.deltaTime;
+
+        if (timer >= relativTimer && introValue == 0)
+        {
+            musicSource.clip = intro;
+            musicSource.Play();
+            timer = 0f;
+            relativTimer = 28.8f;
+            introValue = 1;
+            Debug.Log("playing intro");
+        }
+        else if (timer >= relativTimer && introValue == 1)
+        {
+            musicSource.clip = loop;
+            musicSource.Play();
+            introValue = 2;
+            Debug.Log("Playing loop");
+        }
     }
 }
 

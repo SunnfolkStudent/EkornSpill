@@ -62,7 +62,6 @@ public class PlayerController : MonoBehaviour
         {
             _rigidbody2D.linearVelocityY = climbSpeed;
             _rigidbody2D.gravityScale = 0f;
-            Debug.Log("Climbing");
         }
         
         //Stuck to wall
@@ -70,7 +69,6 @@ public class PlayerController : MonoBehaviour
         {
             _rigidbody2D.linearVelocityY = 0f;
             _rigidbody2D.gravityScale = 0f;
-            Debug.Log("Player is walled");
         }
         
         //Normal falling
