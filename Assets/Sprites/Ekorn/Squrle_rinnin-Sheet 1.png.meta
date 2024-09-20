@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: 9f11ef53439c1c547b6fd820394e7fc4
+guid: 8175d383134bd1b4eaccbae9bbaef091
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4134196229857335459
-    second: Squrle_rinnin-Sheet_0
+      213: -8149304904819886097
+    second: Squrle_rinnin-Sheet 1_0
   - first:
-      213: 5482343783183556984
-    second: Squrle_rinnin-Sheet_1
+      213: 8177796154863958591
+    second: Squrle_rinnin-Sheet 1_1
   - first:
-      213: -8763131880564886151
-    second: Squrle_rinnin-Sheet_2
+      213: -2845554291412336904
+    second: Squrle_rinnin-Sheet 1_2
   - first:
-      213: 3804962397491244836
-    second: Squrle_rinnin-Sheet_3
+      213: 1499890459445029689
+    second: Squrle_rinnin-Sheet 1_3
   - first:
-      213: -7819814992188776310
-    second: Squrle_rinnin-Sheet_4
+      213: -5987645865979062861
+    second: Squrle_rinnin-Sheet 1_4
   - first:
-      213: -1768457518115511036
-    second: Squrle_rinnin-Sheet_5
+      213: 8057324520178092392
+    second: Squrle_rinnin-Sheet 1_5
   - first:
-      213: -4732273733155353692
-    second: Squrle_rinnin-Sheet_6
+      213: -4112435901319919667
+    second: Squrle_rinnin-Sheet 1_6
   - first:
-      213: -1785831615150183118
-    second: Squrle_rinnin-Sheet_7
+      213: -6596789055079912086
+    second: Squrle_rinnin-Sheet 1_7
   - first:
-      213: -7924210272333708286
-    second: Squrle_rinnin-Sheet_8
+      213: 5587815282686348610
+    second: Squrle_rinnin-Sheet 1_8
   - first:
-      213: -5653970192347846198
-    second: Squrle_rinnin-Sheet_9
+      213: -8186666660464909660
+    second: Squrle_rinnin-Sheet 1_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -153,7 +153,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_0
+      name: Squrle_rinnin-Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -168,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d57289fce6260a6c0800000000000000
-      internalID: -4134196229857335459
+      spriteID: fe7bcddad5ad7ee80800000000000000
+      internalID: -8149304904819886097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_1
+      name: Squrle_rinnin-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -190,14 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8712a35cf92351c40800000000000000
-      internalID: 5482343783183556984
+      spriteID: f3ab838664e5d7170800000000000000
+      internalID: 8177796154863958591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_2
+      name: Squrle_rinnin-Sheet 1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -212,14 +212,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9757703dbf9136680800000000000000
-      internalID: -8763131880564886151
+      spriteID: 8fe7747c27f8288d0800000000000000
+      internalID: -2845554291412336904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_3
+      name: Squrle_rinnin-Sheet 1_3
       rect:
         serializedVersion: 2
         x: 192
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42f2f261421fdc430800000000000000
-      internalID: 3804962397491244836
+      spriteID: 93be7351d6ea0d410800000000000000
+      internalID: 1499890459445029689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_4
+      name: Squrle_rinnin-Sheet 1_4
       rect:
         serializedVersion: 2
         x: 256
@@ -256,14 +256,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a80605d12bf6a7390800000000000000
-      internalID: -7819814992188776310
+      spriteID: 3b55b7d0fcb97eca0800000000000000
+      internalID: -5987645865979062861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_5
+      name: Squrle_rinnin-Sheet 1_5
       rect:
         serializedVersion: 2
         x: 320
@@ -278,14 +278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4052b58c14d2577e0800000000000000
-      internalID: -1768457518115511036
+      spriteID: 869824926fd51df60800000000000000
+      internalID: 8057324520178092392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_6
+      name: Squrle_rinnin-Sheet 1_6
       rect:
         serializedVersion: 2
         x: 384
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4ab0d53cc16935eb0800000000000000
-      internalID: -4732273733155353692
+      spriteID: dc7434c1651bde6c0800000000000000
+      internalID: -4112435901319919667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_7
+      name: Squrle_rinnin-Sheet 1_7
       rect:
         serializedVersion: 2
         x: 448
@@ -322,14 +322,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23daf469b937737e0800000000000000
-      internalID: -1785831615150183118
+      spriteID: a6de6c14e4f7374a0800000000000000
+      internalID: -6596789055079912086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_8
+      name: Squrle_rinnin-Sheet 1_8
       rect:
         serializedVersion: 2
         x: 512
@@ -344,14 +344,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2044c08ddbc870290800000000000000
-      internalID: -7924210272333708286
+      spriteID: 24dc403e468eb8d40800000000000000
+      internalID: 5587815282686348610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_9
+      name: Squrle_rinnin-Sheet 1_9
       rect:
         serializedVersion: 2
         x: 576
@@ -366,14 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac9a57ae0101981b0800000000000000
-      internalID: -5653970192347846198
+      spriteID: 4a2a4701c0e136e80800000000000000
+      internalID: -8186666660464909660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_10
+      name: Squrle_rinnin-Sheet 1_10
       rect:
         serializedVersion: 2
         x: 640
@@ -388,14 +388,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22f7dbce819582945954e8dcfb6dcb9e
-      internalID: -1574423076
+      spriteID: 4d26e37625535524aa6e096372dd3390
+      internalID: -1765426045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_11
+      name: Squrle_rinnin-Sheet 1_11
       rect:
         serializedVersion: 2
         x: 704
@@ -410,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eeea4d62fe162d47be14b5f1ccf9140
-      internalID: -613419883
+      spriteID: fc1316fb70b17aa4cb9555e253c77494
+      internalID: -1688435491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_12
+      name: Squrle_rinnin-Sheet 1_12
       rect:
         serializedVersion: 2
         x: 768
@@ -432,14 +432,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb02e1483112cde4ba0e8986c46aca02
-      internalID: -35520364
+      spriteID: 152726091305ec74c9e3dffbbf22bbb7
+      internalID: -334175653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_13
+      name: Squrle_rinnin-Sheet 1_13
       rect:
         serializedVersion: 2
         x: 832
@@ -454,14 +454,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad894f2b25dedb942a0286f2062a2b56
-      internalID: -1055349222
+      spriteID: 2e5a9bd631f99f74dbd90c61dcfd2c4f
+      internalID: 1637886853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_14
+      name: Squrle_rinnin-Sheet 1_14
       rect:
         serializedVersion: 2
         x: 896
@@ -476,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80d324d5f0eae804eb85b3456e3b6558
-      internalID: -1061734873
+      spriteID: 3da5e7ec7d38a464c94af4a97bd144c2
+      internalID: 669361787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_15
+      name: Squrle_rinnin-Sheet 1_15
       rect:
         serializedVersion: 2
         x: 960
@@ -498,14 +498,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd2abe7aa1b006643979c18ae89db18b
-      internalID: -1786491833
+      spriteID: 8a1c18a0d6f1b6d44a32d05e7fa9299e
+      internalID: -415130954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_16
+      name: Squrle_rinnin-Sheet 1_16
       rect:
         serializedVersion: 2
         x: 1024
@@ -520,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbd2623e6fa7565488270195675ea925
-      internalID: -1235676199
+      spriteID: 846f47fa4a44df9438ad5c2c1b26924d
+      internalID: 1811606434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squrle_rinnin-Sheet_17
+      name: Squrle_rinnin-Sheet 1_17
       rect:
         serializedVersion: 2
         x: 1088
@@ -542,8 +542,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e191c657b92d99c43883a691402abd9b
-      internalID: -1537963978
+      spriteID: dcff371d5ea7df54da991be50b4f1530
+      internalID: -1616527283
       vertices: []
       indices: 
       edges: []
@@ -552,7 +552,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e5f8c099eaab78b4c971d7a4c8e7ea9c
+    spriteID: bb00b6c85d245d241b57fd9c9d2d129f
     internalID: 0
     vertices: []
     indices: 
@@ -562,24 +562,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Squrle_rinnin-Sheet_0: -4134196229857335459
-      Squrle_rinnin-Sheet_1: 5482343783183556984
-      Squrle_rinnin-Sheet_10: -1574423076
-      Squrle_rinnin-Sheet_11: -613419883
-      Squrle_rinnin-Sheet_12: -35520364
-      Squrle_rinnin-Sheet_13: -1055349222
-      Squrle_rinnin-Sheet_14: -1061734873
-      Squrle_rinnin-Sheet_15: -1786491833
-      Squrle_rinnin-Sheet_16: -1235676199
-      Squrle_rinnin-Sheet_17: -1537963978
-      Squrle_rinnin-Sheet_2: -8763131880564886151
-      Squrle_rinnin-Sheet_3: 3804962397491244836
-      Squrle_rinnin-Sheet_4: -7819814992188776310
-      Squrle_rinnin-Sheet_5: -1768457518115511036
-      Squrle_rinnin-Sheet_6: -4732273733155353692
-      Squrle_rinnin-Sheet_7: -1785831615150183118
-      Squrle_rinnin-Sheet_8: -7924210272333708286
-      Squrle_rinnin-Sheet_9: -5653970192347846198
+      Squrle_rinnin-Sheet 1_0: -8149304904819886097
+      Squrle_rinnin-Sheet 1_1: 8177796154863958591
+      Squrle_rinnin-Sheet 1_10: -1765426045
+      Squrle_rinnin-Sheet 1_11: -1688435491
+      Squrle_rinnin-Sheet 1_12: -334175653
+      Squrle_rinnin-Sheet 1_13: 1637886853
+      Squrle_rinnin-Sheet 1_14: 669361787
+      Squrle_rinnin-Sheet 1_15: -415130954
+      Squrle_rinnin-Sheet 1_16: 1811606434
+      Squrle_rinnin-Sheet 1_17: -1616527283
+      Squrle_rinnin-Sheet 1_2: -2845554291412336904
+      Squrle_rinnin-Sheet 1_3: 1499890459445029689
+      Squrle_rinnin-Sheet 1_4: -5987645865979062861
+      Squrle_rinnin-Sheet 1_5: 8057324520178092392
+      Squrle_rinnin-Sheet 1_6: -4112435901319919667
+      Squrle_rinnin-Sheet 1_7: -6596789055079912086
+      Squrle_rinnin-Sheet 1_8: 5587815282686348610
+      Squrle_rinnin-Sheet 1_9: -8186666660464909660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
